@@ -1,20 +1,26 @@
+import { NavLink } from "react-router-dom";
+
 function Sidebar(){
     return(
        <nav className = "sidebar">
-
-        <div className="sidebar-left"/>
-
         <div className="sidebar-center">
             <ul className="side-links">
+            <NavLink
+            to="/"
+            className={({ isActive }) => (isActive ? "selected" : "")}
+            >
                 <li>
-                    <a href="#">Recipes</a>
+                    <a>Recipes</a>
                 </li>
+            </NavLink>
+            <NavLink
+                to="/about"
+                className={({ isActive }) => (isActive ? "selected" : "")}
+                >
                 <li>
-                    <a href="#">About Us</a>
+                    <a>About Us</a>
                 </li>
-                <li>
-                    <a href="#">Contact</a>
-                </li>
+            </NavLink>
             </ul>
         </div>
        </nav>

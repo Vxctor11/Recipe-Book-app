@@ -1,3 +1,9 @@
+body{
+  font-size: 1.5rem;
+  width: 99vw;
+}
+
+
 /* Navbar */
 .navbar {
     display: flex;
@@ -9,12 +15,15 @@
   }
   
   .navbar-left img {
+    width: 50px;
+    height: 50px;
+  }
+
+  .navbar-left .logo{
     font-size: 1.5rem;
     font-weight: bold;
     color: #fff;
     text-decoration: none;
-    width: 50px;
-    height: 50px;
   }
   
   .navbar-center .nav-links {
@@ -32,11 +41,79 @@
     color: #fff;
     text-decoration: none;
   }
-  
-  .navbar-right {
-    display: flex;
-    align-items: center;
-  }
+/*///////////////  */
+
+/* Foorter */
+.footer{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  background-color: #b99e9e;
+  color: #fff ;
+  height: 8vh;
+}
+
+.footerImg{
+  margin: 15px;
+  height: 5vh;
+}
+
 /*///////////////  */
 
 /* Sidebar */
+
+.sidebar{
+  background-color: #b99e9e;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-bottom: 50px;
+}
+/*///////////////  */
+
+/* Item Card */
+
+.recipeList{
+  display: flex;
+  flex-direction: row;
+  padding-bottom: 30px;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+.recipe-card{
+  width: 40vw;
+}
+
+.foodImg{
+  height: 30vh;
+  width: 20vw;
+  object-fit: contain;
+}
+
+.btn-delete {
+  background-color: #e85858;
+  height: 40px;
+  border-radius: 5px;
+  border: none;
+  font-size: 1.3rem;
+  color: #fff;
+}
+/*///////////////  */
+
+/* Error Page */
+.errorPage{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center ;
+  font-size: 2.5rem;
+}
+
+.errorImg{
+  height: 30vh;
+  width: 20vw;
+  object-fit: contain;
+}

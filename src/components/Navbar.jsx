@@ -1,23 +1,33 @@
 import logo from "../assets/image/book-recipe-logo.png"
+import { NavLink } from "react-router-dom";
+
 function Navbar(){
     return(
        <nav className = "navbar">
 
         <div className="navbar-left">
-           <img src={logo} alt="logo"/> Recipe Book App
+           <img src={logo} alt="logo"/>
+           <a className="logo">Recipe Book App</a>
         </div>
 
         <div className="navbar-center">
             <ul className="nav-links">
+            <NavLink
+            to="/"
+            className={({ isActive }) => (isActive ? "selected" : "")}
+            >
                 <li>
-                    <a href="#">Recipes</a>
+                    <a>Recipes</a>
                 </li>
+            </NavLink>
+            <NavLink
+                to="/about"
+                className={({ isActive }) => (isActive ? "selected" : "")}
+                >
                 <li>
-                    <a href="#">About Us</a>
+                    <a>About Us</a>
                 </li>
-                <li>
-                    <a href="#">Contact</a>
-                </li>
+            </NavLink>
             </ul>
         </div>
        </nav>
