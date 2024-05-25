@@ -1,25 +1,26 @@
-import data from "../assets/data.json"
-import { useState } from "react";
 import ItemCard from "./ItemCard";
 
-function Recipes(){
-    const [recipeBook, setRecipesBook] = useState(data);
+function Recipes(props) {
+  const deleteRecipe = (recipeId) => {
+    const filterRecipes = props.recipeBook.filter((recipe) => {
+      return recipe.id !== recipeId;
+    });
+    props.setRecipesBook(filterRecipes);
+  };
 
-    const deleteRecipe = (recipeId) => {
-        const filterRecipes = recipeBook.filter((recipe) => {
-            return recipe.id !== recipeId;
-        });
-        setRecipesBook(filterRecipes);
-    };
-
-    return(
-        <div className="recipeList">
-            {recipeBook.map((recipe) => {
-                return(
-                 <ItemCard key={recipe.id} recipe={recipe} deleteRecipe={deleteRecipe} />
-                )
-            })}
-        </div>
-    )
+  return (
+    <div className="recipeList">
+      {props &&
+        props.recipeBook.map((recipe) => {
+          return (
+            <ItemCard
+              key={recipe.id}
+              recipe={recipe}
+              deleteRecipe={deleteRecipe}
+            />
+          );
+        })}
+    </div>
+  );
 }
 export default Recipes;
