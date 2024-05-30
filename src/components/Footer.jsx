@@ -1,8 +1,10 @@
+import gitHubLogo from "../assets/image/githubLogo.png"
 function Footer(){
     return (
-        <footer>
+        <footer className="footer">
+            <h3>You can find the documentation here ➡️ </h3>
             <a href="https://github.com/Vxctor11/Recipe-Book-app" target="_blank">
-                <button> GitHub </button> 
+             <img className="footerImg" src={gitHubLogo} alt="gitLogo" />
             </a>     
         </footer>          
     )

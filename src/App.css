@@ -1,42 +1,197 @@
+body {
+  font-size: 1.5rem;
+  width: 99vw;
+}
+
 /* Navbar */
 .navbar {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    background-color: #b99e9e;
-    color: #fff;
-    padding: 1rem;
-  }
-  
-  .navbar-left img {
-    font-size: 1.5rem;
-    font-weight: bold;
-    color: #fff;
-    text-decoration: none;
-    width: 50px;
-    height: 50px;
-  }
-  
-  .navbar-center .nav-links {
-    list-style-type: none;
-    display: flex;
-    margin: 0;
-    padding: 0;
-  }
-  
-  .navbar-center .nav-links li {
-    margin-right: 1rem;
-  }
-  
-  .navbar-center .nav-links a {
-    color: #fff;
-    text-decoration: none;
-  }
-  
-  .navbar-right {
-    display: flex;
-    align-items: center;
-  }
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #b99e9e;
+  width: 99vw;
+  color: #fff;
+  padding: 1rem;
+}
+
+.navbar-left img {
+  width: 50px;
+  height: 50px;
+}
+
+.navbar-left .logo {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #fff;
+  text-decoration: none;
+}
+
+.navbar-center .nav-links {
+  list-style-type: none;
+  display: flex;
+  margin: 0;
+  padding: 0;
+}
+
+.navbar-center .nav-links li {
+  margin-right: 1rem;
+}
+
+.navbar-center .nav-links a {
+  color: #fff;
+  text-decoration: none;
+}
+/*///////////////  */
+
+/* Foorter */
+.footer {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  background-color: #b99e9e;
+  color: #fff;
+  height: 8vh;
+}
+
+.footerImg {
+  margin: 15px;
+  height: 5vh;
+}
+
 /*///////////////  */
 
 /* Sidebar */
+
+.sidebar {
+  background-color: #b99e9e;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-bottom: 50px;
+}
+/*///////////////  */
+
+/* Item Card */
+
+.recipeList {
+  display: flex;
+  flex-direction: row;
+  padding-bottom: 30px;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+.recipe-card {
+  width: 40vw;
+}
+
+.foodImg {
+  height: 30vh;
+  width: 20vw;
+  object-fit: contain;
+}
+
+.btn-delete {
+  background-color: #e85858;
+  height: 40px;
+  border-radius: 5px;
+  border: none;
+  font-size: 1.3rem;
+  color: #fff;
+}
+
+.btn-edit {
+  background-color: #299c29;
+  height: 40px;
+  border-radius: 5px;
+  border: none;
+  font-size: 1.3rem;
+  color: #fff;
+  margin-left: 45px;
+}
+/*///////////////  */
+
+/* Error Page */
+.errorPage {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-size: 2.5rem;
+}
+
+.errorImg {
+  height: 30vh;
+  width: 20vw;
+  object-fit: contain;
+}
+/*///////////////  */
+
+/* Forms */
+form {
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  justify-content: center;
+  max-width: 600px;
+  margin: 1.5rem auto;
+
+  padding: 1.5rem; /* Add some padding to create the card effect */
+  border: 1px solid #ccc; /* Add a border to make it recognizable */
+  border-radius: 0.5rem; /* Rounded corners for the card */
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1); /* Add a subtle shadow to the card */
+}
+
+form span {
+  position: absolute;
+  top: 0;
+  left: 0;
+  padding-top: 15px;
+  margin-left: 40px;
+  width: 100%;
+
+  font-size: 1.2rem;
+  font-weight: 600;
+  justify-content: space-between;
+}
+
+input[type="text"],
+input[type="text"],
+input[type="url"],
+select,
+input[type="number"] {
+  width: 100%;
+  height: 35px;
+  padding: 0.5rem;
+  border: 1px solid #ccc;
+  border-radius: 0.25rem;
+  margin-bottom: 0.5rem;
+  margin-left: -0.1rem;
+}
+
+label {
+  display: block;
+  text-align: left;
+  margin: 2rem;
+  height: 35px;
+}
+
+button[type="submit"] {
+  width: 200px;
+  height: 40px;
+  padding: 0.2rem 1rem;
+  margin: 1rem 1.7rem;
+  background-color: #3490dc;
+  color: #fff;
+  font-weight: bold;
+  border: none;
+  border-radius: 0.25rem;
+  cursor: pointer;
+}
+
+button[type="submit"]:hover {
+  background-color: #2779bd;
+}
