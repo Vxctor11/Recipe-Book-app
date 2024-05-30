@@ -18,13 +18,11 @@ const AddFood = ({ recipeBook, setRecipesBook }) => {
     setRecipesBook((prev) => [food, ...prev]);
   };
 
-  // setFood((prev) => [newFood, ...prev]);
-
   return (
     <div>
       {/* FORM */}
       <form onSubmit={handleSubmit}>
-        <span>Add a Recipe</span>
+        <span>Add A New Recipe</span>
         <div>
           <label>
             Name

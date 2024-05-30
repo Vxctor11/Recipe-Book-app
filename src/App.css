@@ -9,6 +9,7 @@ body {
   justify-content: space-between;
   align-items: center;
   background-color: #b99e9e;
+  width: 99vw;
   color: #fff;
   padding: 1rem;
 }
@@ -100,6 +101,16 @@ body {
   font-size: 1.3rem;
   color: #fff;
 }
+
+.btn-edit {
+  background-color: #299c29;
+  height: 40px;
+  border-radius: 5px;
+  border: none;
+  font-size: 1.3rem;
+  color: #fff;
+  margin-left: 45px;
+}
 /*///////////////  */
 
 /* Error Page */
@@ -138,7 +149,8 @@ form span {
   position: absolute;
   top: 0;
   left: 0;
-  padding-top: 10px;
+  padding-top: 15px;
+  margin-left: 40px;
   width: 100%;
 
   font-size: 1.2rem;
@@ -171,7 +183,7 @@ button[type="submit"] {
   width: 200px;
   height: 40px;
   padding: 0.2rem 1rem;
-  margin-top: 1rem;
+  margin: 1rem 1.7rem;
   background-color: #3490dc;
   color: #fff;
   font-weight: bold;

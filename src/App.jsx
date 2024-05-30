@@ -1,5 +1,5 @@
 import "./App.css";
-// import EditRecipe from "./components/EditRecipe.jsx";
+import EditRecipe from "./components/EditRecipe.jsx";
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
 import Sidebar from "./components/Sidebar";
@@ -14,7 +14,7 @@ import data from "./assets/data.json";
 function App() {
   const [recipeBook, setRecipesBook] = useState(data);
   return (
-    <div>
+    <div className="conteiner">
       <Navbar />
       <Routes>
         <Route
@@ -26,11 +26,22 @@ function App() {
             />
           }
         />
-        <Route path="/itemDetails" element={<ItemDetails />} />
+        <Route
+          path="/itemDetails/:foodId"
+          element={<ItemDetails recipeBook={recipeBook} />}
+        />
         <Route path="/about" element={<AboutPage />} />
+        <Route
+          path="/editRecipe/:recipeId"
+          element={
+            <EditRecipe
+              recipeBook={recipeBook}
+              setRecipesBook={setRecipesBook}
+            />
+          }
+        />
         <Route path="*" element={<ErrorPage />} />
       </Routes>
-      {/* <EditRecipe /> */}
       <Sidebar />
       <Footer />
     </div>
